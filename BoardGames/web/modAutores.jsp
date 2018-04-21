@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="css/estilos.css">
-        <title>BoardGames</title>
+        <title>Juegos de mesa</title>
     </head>
     <body>
         <% request.setCharacterEncoding("UTF-8");%>
@@ -18,22 +18,21 @@
             <br><br>
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Modificación de juegos</div>
-                <form method="get" action="guardaBGMod.jsp">
+                <form method="get" action="guardaModAutores.jsp">
                     <div class="form-group"> 
-                        <label>&nbsp;&nbsp;ID:&nbsp;</label><input type="text" size="5" name="BG_id" value="<%= Integer.valueOf(request.getParameter("BG_id"))%>" readonly>
+                        <label>&nbsp;&nbsp;ID:&nbsp;</label><input type="text" size="5" name="Autores_id" value="<%= Integer.valueOf(request.getParameter("Autores_id"))%>" readonly>
                     </div>
                     <div class="form-group">
-                        <label>&nbsp;&nbsp;Genero:&nbsp;</label><input type="text" size="35" name="genero" value="<%= request.getParameter("genero")%>">
+                        <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre")%>">
                     </div>
                     <div class="form-group">
-                        <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="5" name="nombre" value="<%= request.getParameter("nombre")%>">
-                        <label>&nbsp;&nbsp;Editorial:&nbsp;</label><input type="text" size="5" name="editorial" value="<%= request.getParameter("editorial")%>">
+                        <label>&nbsp;&nbsp;Nacionalidad:&nbsp;</label><input type="text" size="5" name="nacionalidad" value="<%= request.getParameter("nacionalidad")%>">
+                        <label>&nbsp;&nbsp;Premios:&nbsp;</label><input type="text" size="40" name="premios" value="<%= request.getParameter("premios")%>">
                     </div>
-                    <div class="form-group">
-                        <label>&nbsp;&nbsp;Precio:&nbsp;</label><input type="text" name="precio" size="20" value="<%= Double.valueOf(request.getParameter("precio"))%>">
-                    </div>
+                    
+                    
                     <hr>
-                    &nbsp;&nbsp;<a href="index.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
+                    &nbsp;&nbsp;<a href="Autores.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Aceptar</button><br><br>
                 </form>
 

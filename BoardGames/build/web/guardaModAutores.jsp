@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="css/estilos.css">
-        <title>BoardGames</title>
+        <title>Autores</title>
     </head>
     <body>
         <%
@@ -22,14 +22,15 @@
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
             Statement s = conexion.createStatement();
             request.setCharacterEncoding("UTF-8");
-            String actualizacion = "UPDATE BG_tabla SET "
-                    + "genero='" + request.getParameter("genero")
-                    + "', nombre='" + request.getParameter("nombre")
-                    + "', editorial='" + request.getParameter("editorial")
-                    + "', precio=" + Double.valueOf(request.getParameter("precio"))
-                    + " WHERE BG_id=" + Integer.valueOf(request.getParameter("BG_id"));
+            String actualizacion = "UPDATE Autores SET "
+                    + "nombre='" + request.getParameter("nombre")
+                    + "', nacionalidad='" + request.getParameter("nacionalidad")
+                    + "', premios='" + request.getParameter("premios") + "' " 
+                    
+                    
+                    + " WHERE Autores_id=" + Integer.valueOf(request.getParameter("Autores_id"));
             s.execute(actualizacion);
-            out.println("Juego actualizado correctamente.");
+            out.println("Autor actualizado correctamente.");
             conexion.close();
         %>
         <br>

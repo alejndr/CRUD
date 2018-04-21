@@ -24,21 +24,22 @@
       request.setCharacterEncoding("UTF-8");
       
      
-      String consultaNumSocio = "SELECT * FROM BG_tabla WHERE BG_id="
-                                + Integer.valueOf(request.getParameter("BG_id"));      
+      String consultaNumSocio = "SELECT * FROM Juegos WHERE Juegos_id="
+                                + Integer.valueOf(request.getParameter("Juegos_id"));      
       
       ResultSet numeroDeSocios = s.executeQuery (consultaNumSocio);
       numeroDeSocios.last();
       
       if (numeroDeSocios.getRow() != 0) {
         out.println("Lo siento, no se ha podido dar de alta, ya existe un juego con ese numero "
-                    + request.getParameter("BG_id") + ".");
+                    + request.getParameter("Juegos_id") + ".");
       } else {
-        String insercion = "INSERT INTO BG_tabla VALUES (" + Integer.valueOf(request.getParameter("BG_id"))
+        String insercion = "INSERT INTO Juegos VALUES (" + Integer.valueOf(request.getParameter("Juegos_id"))
                            + ", '" + request.getParameter("genero")
                            + "', '" + request.getParameter("nombre")
                            + "', '" + request.getParameter("editorial")
-                           + "', " + Double.valueOf(request.getParameter("precio")) + ")";
+                           + "', " + Double.valueOf(request.getParameter("precio"))
+                           + ", " + Integer.valueOf(request.getParameter("Id Autor"))+ ")";
         s.execute(insercion);
         out.println("Juego dado de alta correctamente.");
       }

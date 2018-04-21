@@ -13,7 +13,7 @@
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
             Statement s = conexion.createStatement();
-            s.execute("DELETE FROM BG_tabla WHERE BG_id=" + request.getParameter("BG_id"));
+            s.execute("DELETE FROM Autores WHERE Autores_id=" + request.getParameter("Autores_id"));
             s.close();
         %>	
         <script>document.location = "index.jsp"</script> 
