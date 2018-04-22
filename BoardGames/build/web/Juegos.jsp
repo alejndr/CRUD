@@ -13,7 +13,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/estilos.css">
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        
+        
         <title>Juegos de mesa</title>
     </head>
 
@@ -21,7 +24,7 @@
         <div class="container">
             <br><br>			
             <div class="panel panel-primary">
-                <div class="uno"><h2>Juegos de mesa</h2></div>
+                <div class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Juegos de mesa</div>
                 <%
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
@@ -32,12 +35,12 @@
                 <table class="striped">
                     <tr><th>ID</th><th>Genero</th><th>Nombre</th><th>Editorial</th><th>Precio</th><th>ID del Autor</th></tr>
                     <form method="get" action="guardaJuegos.jsp">
-                        <tr><td><input type="text" name="Juegos_id"  size="5"></td>
+                        <tr><td><input type="text" name="Juegos_id" style="width:50px"  size="5"></td>
                             <td><input type="text" name="genero" style="width:100px" size="10"></td>
                             <td><input type="text" name="nombre" style="width:170px" size="20"></td>
                             <td><input type="text" name="editorial" style="width:150px" size="15"></td>
                             <td><input type="text" name="precio" style="width:100px" size="10"></td>
-                            <td><input type="text" name="Id Autor" size="5"></td>
+                            <td><input type="text" name="Id Autor" style="width:50px" size="5"></td>
                             <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Añadir</button></td><td></td></tr>           
                     </form>
                     <%
@@ -79,7 +82,7 @@
             <br>&nbsp;&nbsp;<a href="index.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Menu principal</a>
 
         </div>
-
+                    <div id="footer"></div>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>

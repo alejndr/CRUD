@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="css/estilos.css">
         <title>Juegos de mesa</title>
     </head>
@@ -20,13 +21,13 @@
                 <div class="panel-heading text-center">Modificación de juegos</div>
                 <form method="get" action="guardaModAutores.jsp">
                     <div class="form-group"> 
-                        <label>&nbsp;&nbsp;ID:&nbsp;</label><input type="text" size="5" name="Autores_id" value="<%= Integer.valueOf(request.getParameter("Autores_id"))%>" readonly>
+                        <label>&nbsp;&nbsp;ID:&nbsp;</label><input type="text" size="11" name="Autores_id" value="<%= Integer.valueOf(request.getParameter("Autores_id"))%>" readonly>
                     </div>
                     <div class="form-group">
                         <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre")%>">
                     </div>
                     <div class="form-group">
-                        <label>&nbsp;&nbsp;Nacionalidad:&nbsp;</label><input type="text" size="5" name="nacionalidad" value="<%= request.getParameter("nacionalidad")%>">
+                        <label>&nbsp;&nbsp;Nacionalidad:&nbsp;</label><input type="text" size="50" name="nacionalidad" value="<%= request.getParameter("nacionalidad")%>">
                         <label>&nbsp;&nbsp;Premios:&nbsp;</label><input type="text" size="40" name="premios" value="<%= request.getParameter("premios")%>">
                     </div>
                     

@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="css/estilos.css">
         <title>BoardGames</title>
     </head>
@@ -40,7 +41,7 @@
                            + "', '" + request.getParameter("premios")
                            + "' " + ")";
         s.execute(insercion);
-        out.println("Autor dado de alta correctamente.");
+        
       }
       conexion.close();
     %>

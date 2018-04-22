@@ -43,7 +43,11 @@ INSERT INTO `Juegos` (`Juegos_id`, `genero`, `nombre`, `editorial`, `precio`, `A
 (4, 'Deckbuilder', 'Hero Realms', 'Devir', 19.99, 4),
 (5, 'Puzzle', 'Patchwork', 'Maldito', 19.00, 1),
 (6, 'Bluffing', 'Bang!', 'Mayfair Games', 19.00, 5),
-(7, 'Bluffing', 'Ciudadelas', 'Edge', 25.00, 6);
+(7, 'Bluffing', 'Ciudadelas', 'Edge', 25.00, 6),
+(8, 'Party', 'Jungle Speed', 'Asmodee', 14.99, 7),
+(9, 'Estrategia', 'Carcassonne', 'Devir', 19.99, 8),
+(10, 'Party', 'Munchkin', 'Edge', 14.99, 9),
+(11, 'Estrategia', 'Illuminaty', 'Edge', 14.99, 9);
 
 
 
@@ -59,10 +63,23 @@ INSERT INTO `Autores` (`Autores_id`, `nombre`, `nacionalidad`, `premios`) VALUES
 
 (1, 'Uwe Rosenberg', 'Aleman', 'Deutscher Spiele Preis, Meeples Choice Award'),
 (2, 'Jonathan Gilmour', 'Americano', ''),
-(3, 'Isaac Childres', 'Americano', ''),
-(4, 'Robert Dougherty', 'Ingles', ''),
+(3, 'Isaac Childres', 'Americano', 'International Gamers Award'),
+(4, 'Robert Dougherty', 'Britanico', ''),
 (5, 'Emiliano Sciarra', 'Italiano', 'Best Traditional Card Game, Best Graphic Design of a Card Game or Expansion'),
-(6, 'Bruno Faidutti', 'Italiano', 'Spiel des Jahres');
+(6, 'Bruno Faidutti', 'Italiano', 'Spiel des Jahres'),
+(7, 'Thomas Vuarchex', 'Checo', ''),
+(8, 'Klaus-Jürgen Wrede', 'Aleman', 'Deutscher Spiele Preis, Meeples Choice Award, Spiel des Jahres'),
+(9, 'Steve Jackson', 'Americano', 'Origins Award for Game Accessory of the Year'),
+(10, 'Richard Gardfield', 'Americano', ''),
+(11, 'Jervis Johnson', 'Britanico', 'International Gamers Award'),
+(12, 'Reiner Knizia', 'Aleman', 'Spiel des Jahres, Deutscher Spiele Preis, Premio Origins'),
+(13, 'Elizabeth Magie', 'Americana', ''),
+(14, 'Henry Murkow', 'Sueco', ''),
+(15, 'Andreas Seyfarth', 'Sueco', 'Spiel des Jahres, Deutscher Spiele Preis, International Gamers Award, Meeples Choice Award'),
+(16, 'Sid Sackson', 'Americano', 'Spiel des Jahres'),
+(17, 'Klaus Teuber', 'Aleman', 'Spiel des Jahres, Deutscher Spiele Preis, Premio Origins'),
+(18, 'Donald X. Vaccarino', 'Americano', ''),
+(19, 'Martin Wallace', 'Britanico', 'International Gamers Award');
 
 
 
@@ -76,7 +93,7 @@ ALTER TABLE `Autores`
 
   
 ALTER TABLE `Juegos`
-  ADD CONSTRAINT `fk_Juegos_Autor` FOREIGN KEY (`Autores_id`) REFERENCES `Autores` (`Autores_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Juegos_Autor` FOREIGN KEY (`Autores_id`) REFERENCES `Autores` (`Autores_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
   
   

@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/estilos.css">
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>BoardGames</title>
     </head>
 
@@ -21,7 +22,7 @@
         <div class="container">
             <br><br>			
             <div class="panel panel-primary">
-                <div class="uno"><h2>Autores</h2></div>
+                <div class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Autores</div>
                 <%
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
@@ -32,9 +33,9 @@
                 <table class="striped">
                     <tr><th>ID</th><th>Nombre</th><th>Nacionalidad</th><th>Premios</th></tr>
                     <form method="get" action="guardaAutores.jsp">
-                        <tr><td><input type="text" name="Autores_id" size="5"></td>
+                        <tr><td><input type="text" name="Autores_id" style="width:50px" size="5"></td>
                             <td><input type="text" name="nombre" style="width:150px" size="20"></td>
-                            <td><input type="text" name="nacionalidad" size="5"></td>
+                            <td><input type="text" name="nacionalidad" style="width:100px" size="5"></td>
                             <td><input type="text" name="premios" style="width:350px" size="40"></td>
                             
                             <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Añadir</button></td><td></td></tr>           
