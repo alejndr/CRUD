@@ -31,7 +31,7 @@
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
                     
                     Statement s = conexion.createStatement();
-                    ResultSet listado = s.executeQuery("SELECT juegos_id,genero,juegos.nombre as nombre, editorial, precio, autores.Autores_id as Autores_id, autores.nombre as autor_juego FROM `juegos` LEFT join autores on juegos.Juegos_id = autores.Autores_id");
+                    ResultSet listado = s.executeQuery("SELECT juegos_id,genero,juegos.nombre as nombre, editorial, precio, autores.Autores_id as Autores_id, autores.nombre as autor_juego FROM `juegos` inner join autores on juegos.Autores_id = autores.Autores_id");
                     
                 %>
 
