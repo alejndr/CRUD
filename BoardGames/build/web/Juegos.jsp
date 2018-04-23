@@ -2,6 +2,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="java.sql.SQLException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,8 +29,10 @@
                 <%
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/boardgames", "root", "");
+                    
                     Statement s = conexion.createStatement();
-                    ResultSet listado = s.executeQuery("SELECT * FROM Juegos");
+                    ResultSet listado = s.executeQuery("SELECT juegos_id,genero,juegos.nombre as nombre, editorial, precio, autores.Autores_id as Autores_id, autores.nombre as autor_juego FROM `juegos` LEFT join autores on juegos.Juegos_id = autores.Autores_id");
+                    
                 %>
 
                 <table class="striped">
@@ -40,7 +43,8 @@
                             <td><input type="text" name="nombre" style="width:170px" size="20"></td>
                             <td><input type="text" name="editorial" style="width:150px" size="15"></td>
                             <td><input type="text" name="precio" style="width:100px" size="10"></td>
-                            <td><input type="text" name="Id Autor" style="width:50px" size="5"></td>
+                            <td><input type="text" name="Id Autor" style="width:150px" size="5"></td>
+
                             <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Añadir</button></td><td></td></tr>           
                     </form>
                     <%
@@ -51,7 +55,9 @@
                             out.println("<td>" + listado.getString("nombre") + "</td>");
                             out.println("<td>" + listado.getString("editorial") + "</td>");
                             out.println("<td>" + listado.getString("precio") + "€ </td>");
-                            out.println("<td>" + listado.getString("Autores_id") + "</td>");
+                            out.println("<td>" + listado.getString("autor_juego") +" ("+ listado.getString("Autores_id") + ")</td>");
+                            
+                            
                     %>
                     <td>
                         <form method="get" action="modJuegos.jsp">
