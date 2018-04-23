@@ -5,6 +5,6 @@ Repositorio del proyecto Crud en SQL y JSP sobre Gestion de juegos de mesa, el c
 
 ## Capturas
 
-<img src="Capturas/capJuegos.JPG">
+<img src="Capturas/capJuegos.PNG">
 
-<img src="Capturas/capAutores.JPG">
+<img src="Capturas/capAutores.PNG">
