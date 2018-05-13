@@ -11,3 +11,9 @@ Repositorio del proyecto Crud en SQL y JSP sobre Gestion de juegos de mesa, el c
 <img src="Capturas/capAutores.PNG">
 
 
+## Implementación de Arraylist en forma de desplegable.
+<img src="Capturas/capArray.PNG">
+
+
+## Implementación de Hashmap en forma de Login
+<img src="Capturas/capHash.PNG">
