@@ -38,7 +38,7 @@
                         
                         <label>&nbsp;&nbsp;Id Autor:&nbsp;</label><input type="text" name="Autores_id" size="20" value="<%= Integer.valueOf(request.getParameter("Autores_id"))%>">
                     </div>
-                    <hr>
+                    <br>
                     &nbsp;&nbsp;<a href="index.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Aceptar</button><br><br>
                 </form>

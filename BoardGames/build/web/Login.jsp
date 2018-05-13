@@ -14,10 +14,21 @@
         <title>BoardGames</title>
     </head>
     <body class="home">
-        <div id="wrapper">
-            <a href="Juegos.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Colección de juegos</a><br><br><br>
-            <a href="Autores.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Info de los autores</a>
-        </div>
-        
+        <table class="striped">
+            <form class="form" role="form" id="formLogin" method="get" action="loginFunc.jsp">
+
+                <tr><td>Usuario</td>
+                    <td><input type="text" name="usuario" id="uname1"><td>
+                </tr>
+
+                <tr><td>Contraseña</td>
+                    <td><input type="password" name="contrasena" id="pwd1" required=""><td></tr>
+                <tr >
+
+                    <td style="width: 50px"><button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button></td>
+                </tr>
+            </form>
+        </table>
+
     </body>
 </html>

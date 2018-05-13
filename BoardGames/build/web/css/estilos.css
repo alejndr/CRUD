@@ -4,11 +4,7 @@ body
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body.home
-{
-    
-    
-}
+
 
 table 
 {     
@@ -36,7 +32,7 @@ tr:hover td
 #wrapper
 {
     padding-top: 300px;
-    width: 265px;
+    
     margin: 0 auto;
 }
 
@@ -45,3 +41,27 @@ tr:hover td
     padding-bottom: 100px;
 }
 
+.striped
+{
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+}
+
+.form-group
+{
+    background-color: #e0f7fa;
+    border-color: #b2ebf2;
+    
+}
+
+.panel-heading
+{
+    color: whitesmoke;
+}
+
+.home
+{
+    border-radius: 15px;
+}

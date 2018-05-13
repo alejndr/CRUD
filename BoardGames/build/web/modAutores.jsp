@@ -20,6 +20,7 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Modificación de juegos</div>
                 <form method="get" action="guardaModAutores.jsp">
+                    
                     <div class="form-group"> 
                         <label>&nbsp;&nbsp;ID:&nbsp;</label><input type="text" size="11" name="Autores_id" value="<%= Integer.valueOf(request.getParameter("Autores_id"))%>" readonly>
                     </div>
@@ -31,8 +32,7 @@
                         <label>&nbsp;&nbsp;Premios:&nbsp;</label><input type="text" size="40" name="premios" value="<%= request.getParameter("premios")%>">
                     </div>
                     
-                    
-                    <hr>
+                    <br>
                     &nbsp;&nbsp;<a href="Autores.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Aceptar</button><br><br>
                 </form>

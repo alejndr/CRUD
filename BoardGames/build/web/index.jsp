@@ -15,8 +15,8 @@
     </head>
     <body class="home">
         <div id="wrapper">
-            <a href="Juegos.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Juegos</a>
-            <a href="Autores.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Autores</a>
+            <a href="Juegos.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Colección de juegos</a><br><br><br>
+            <a href="Autores.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Info de los autores</a>
         </div>
         
     </body>
